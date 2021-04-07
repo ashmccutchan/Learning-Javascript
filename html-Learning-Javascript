@@ -1,0 +1,595 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+<head>
+  <title>Learning Javascript</title>
+</head>
+
+<body>
+    <nav id = "navbar"> <!-- Navigation Bar -->       
+      <h1 id = "sticky">Learning Javascript</h1>
+    <ul>
+      <a class="nav-link" href="#Comments" rel="internal"><li>Comments</li></a>
+      <a class="nav-link" href="#Data_Types" rel="internal"><li>Data Types</li></a>
+      <a class="nav-link" href="#Variables" rel="internal"><li>Variables</li></a>
+      <a class="nav-link" href="#Math" rel="internal"><li>Math Operators</li></a>
+      <a class="nav-link" href="#Strings" rel="internal"><li>Strings</li></a>
+      <a class="nav-link" href="#Zero_Indexing" rel="internal"><li>Zero Indexing</li></a>
+      <a class="nav-link" href="#Arrays" rel="internal"><li>Arrays</li></a>
+      <a class="nav-link" href="#Functions" rel="internal"><li>Functions</li></a>
+      <a class="nav-link" href="#Operators" rel="internal"><li>Operators</li></a>
+      <a class="nav-link" href="#Find_Data_Type" rel="internal"><li>Find Data Type</li></a>
+      <a class="nav-link" href="#Boolean_Values" rel="internal"><li>Boolean Values</li></a>
+      <a class="nav-link" href="#If_Statements" rel="internal"><li>If Statements</li></a>
+      <a class="nav-link" href="#Switch_Statements" rel="internal"><li>Switch Statements</li></a>
+      <a class="nav-link" href="#Objects" rel="internal"><li>Objects</li></a>
+      <a class="nav-link" href="#While_Statements" rel="internal"><li>While Statements</li></a>
+      <a class="nav-link" href="#For_Statements" rel="internal"><li>For Statements</li></a>
+      <a class="nav-link" href="#Do_While_Statements" rel="internal"><li>Do...While Statements</li></a>
+      <a class="nav-link" href="#Recursion" rel="internal"><li>Recursion</li></a>
+      <a class="nav-link" href="#Math_Random" rel="internal"><li>Math Functions</li></a>
+      <a class="nav-link" href="#parseInt" rel="internal"><li>String to Number</li></a>
+      <a class="nav-link" href="#Conditional_Operator" rel="internal"><li>Conditional Operator</li></a>
+    </ul>
+  </nav></header>
+
+<main id="main-doc"> <!-- Main Document Div Container -->
+    <section class="main-section" id="Introduction"> <!-- Introduction Container -->
+ 
+  <h1>Learning Javascript</h1> 
+      
+  <h2 id="Comments">Comments</h2>
+  <p>In-line comment</p>
+  <code>// comment</code>
+  <p>Multi-line comment</p>
+  <code>/* multi-line comment */</code>
+  <h2 id="Data_Types">Data Types</h2>
+  <code>undefined, null, boolean, string, symbol, bigint, number, object</code>
+      
+  <h2 id="Variables">Variables</h2>
+  <p>Declare a Variable</p>
+  <code>var</code>
+  <p>Naming a Variable</p>
+  <code>var variableName;</code>
+  <p>Store Value in a Variable</p>
+  <code>var variableName = 5;</code>
+  <p>Have One Variable Equal Another</p>
+  <code>var variableName = 5;<br>
+    var anotherVariable;<br>
+    anotherVariable = variableName;</code>
+  <i>anotherVariable = 5</i>
+  <p>Initialize Variable</p>
+  <code> var thisVariable = 0;</code>
+      
+  <h2 id="Math">Math Operators</h2>
+  <p>Adding</p>
+  <code>var mathVariable = 2 + 5;</code>
+  <p>Subtraction</p>
+  <code>var mathVariable = 12 - 5;</code><p>Multiply</p>
+  <code>var mathVariable = 2 * 5;</code><p>Divide</p>
+  <code>var mathVariable = 12 / 4;</code>
+  <p>Increment</p>
+  <code>i++; //same as i = i + 1</code>
+  <p>Decrement</p>
+  <code>i--; //same as i = i - 1</code>
+  <p>Remainder</p>
+  <code>5 % 2 = 1</code>
+  <p>Even or Odd Check</p>
+  <code>17 % 2 = 1 (odd)<br>
+    48 % 2 = 0 (even)</code>
+  <p>Augmented Addition</p>
+  <code>var mathVariable = 10;<br>
+    mathVariable += 5; //same as mathVariable = mathVariable + 5;<br></code>
+  <i>mathVariable = 15</i>
+  <p>Augmented Subtraction</p>
+  <code>var mathVariable = 10;<br>
+    mathVariable -= 5; //same as mathVariable = mathVariable - 5;<br></code>
+  <i>mathVariable = 5</i>
+  <p>Augmented Multiplication</p>
+  <code>var mathVariable = 10;<br>
+    mathVariable *= 5; //same as mathVariable = mathVariable * 5;<br></code>
+  <i>mathVariable = 50</i>
+  <p>Augmented Division</p>
+  <code>var mathVariable = 10;<br>
+    mathVariable /= 5; //same as mathVariable = mathVariable / 5;<br></code>
+  <i>mathVariable = 2</i>
+      
+      <h2 id="Strings">Strings</h2>
+  <p>String Literal</p>
+  <code>var stringName = "this string";</code>
+  <p>Escape Quote in String</p>
+  <code>\" "\</code>
+  <code>var escapeString = "Text before escape, \"escaped text\".";</code>
+  <p>Escape Sequences</p>
+  <code>\'	single quote<br>
+\"	double quote<br>
+\\	backslash<br>
+\n	newline<br>
+\r	carriage return<br>
+\t	tab<br>
+\b	word boundary<br>
+\f  form feed</code>
+  <p>Concatenating Strings</p>
+  <code>var addingStrings = "I come first." + "I come second.";</code>
+  <p>Strings with Variables</p>
+  <code>var stringAddOn = "this is text to be added,";<br>
+    var stringText = "This is some text," stringAddOn + " this is the end of the string, stringText";</code>
+  <p>Appending Strings</p>
+  <code>var noun = "cat";<br>
+    var fullText = "This is a ";<br>
+    fullText += noun;<br></code>
+  <i>fullText = This is a cat</i>
+  <p>Length of a string</p>
+  <code>.length</code>
+  <code>console.log("Anon Blues".length)</code>
+  <i>= 10</i>
+  <p>also:</p>
+  <code>var firstName = "Ashley";<br>
+    firstName.length</code>
+  <i>= 5</i>
+  <p>Last Character of a String</p>
+  <p>Find Third to Last Character</p>
+  <code>var firstName = "Ashley";<br>
+    var letter = firstName[firstName.length - 3];</code><
+  <i>letter = l</i>
+  
+  <h2 id="Zero_Indexing">Zero-Indexing</h2>
+  <p>Counting starts at 0</p>
+  <code>var firstName = "Ashley";<br>
+  var firstLetter = firstName[0];</code>
+  <i>Bracket notation counted the first character of "Ashley"<br>firstLetter = l</i>
+  
+  <h2 id="Arrays">Arrays</h2>
+  <code>var sandwich = ["peanut butter", "jelly", "bread"]</code>
+  <p>Multi-Dimensional Array</p>
+  <code>[["Bulls", 23], ["White Sox", 45]]</code>
+  <p>Access Array Data</p>
+  <code>var array = [50,60,70];<br>
+  array[0];<br>
+    var data = array[1];</code>
+  <i>array[0] = 50, data = 60</i>
+  <p>Modify Array Data</p>
+  <code>var ourArray = [50,40,30];<br>
+    ourArray[0] = 15;</code>
+  <i>ourArray = [15,40,30]</i>
+  <p>Access Multi-Dimensional Arrays</p>
+  <code>var arr = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [[10,11,12], 13, 14]];<br>
+    console.log(arr[3]);</code>
+  <i>[[10,11,12],13,14]</i>
+  <code>console.log(arr[3][0]);</code>
+  <i>[10, 11, 12]</i>
+  <code>console.log(arr[3][0][1]);</code>
+  <i>11</i>
+<p>Arrays with push()</p>
+<code>var arr1 = [1,2,3];<br>
+  arr1.push(4);</code>
+<i>arr1 = [1,2,3,4]</i>
+<p>Arrays with pop()</p>
+<code>var numbers = [1, 4, 6];<br>
+var lessNumbers = numbers.pop();</code>
+<i>lessNumbers = 6<br>numbers = [1, 4]</i>
+<p>Arrays with shift()</p>
+<code>var ourArray = ["Ashley", "J", ["cat"]];<br>
+  var shiftedArray = ourArray.shift();</code>
+<i>shiftedArray = Ashley<br>ourArray = [["J", ["cat"]]</i>
+<p>Arrays with unshift()</p>
+<code>var ourArray = ["Ashley", "J", ["cat"]];<br>
+  var ourArray.unshift("Happy");</code>
+<i>["Happy", "Ashley", "J", ["cat"]]</i>
+  
+<h2 id="Functions">Functions</h2>
+<p>function functionName(){}</p>
+<pre><code>function functionName() {
+  console.log("Hello World");
+  }</pre></code>
+<i>Hello World</i>
+<p>Parameters are placeholders in a function</p>
+<code>function functionName(parameters) {}</code>
+<p>Arguments are when the function is called it recieves actual values</p>
+<code>function plusThree(num) {<br>
+  return num + 3;<br>
+}<br>
+  var answer = plusThree(5);<br></code>
+<i>answer = 8</i>
+<p>A function without a return value returns a value of undefined</p>
+  
+<h2 id="Operators">Operators</h2>
+<table>
+  <tr><td><code>==</code></td>
+  <td><code>equality (will perform type conversion)</code></td></tr>
+  <tr><td><code>===</code></td>
+  <td><code>strict equality (will not perform type conversion)</code></td></tr>
+  <tr><td><code>></code></td>
+  <td><code>greater than</code></td></tr>
+  <tr><td><code>></code></td>
+  <td><code>greater than</code></td></tr>
+  <td><code>>=</code></td>
+  <td><code>greater than or equal to</code></td>
+  <tr><td><code>&lt</code></td>
+  <td><code>less than</code></td></tr>
+  <tr><td><code>&lt=</code></td>
+  <td><code>less than or equal to</code></td></tr>
+  <tr><td><code>!=</code></td>
+  <td><code>not equal to(convert data types)</code></td></tr>
+  <tr><td><code>!==</code></td>
+  <td><code>not equal to</code></td></tr>
+  <tr><td><code>!==</code></td>
+  <td><code>not equal to</code></td></tr>
+  <tr><td><code>&&</code></td>
+  <td><code>if operands on the left an right are true</code></td></tr>
+  <tr><td><code>||</code></td>
+  <td><code>if either the left or right operands are true</code></td></tr>
+  </table>
+  <p>Equality</p>
+<code>==</code>
+<i>will perform type conversion</i>
+<code>1 == '1'</code>
+<i>true statement</i>
+<p>Strict Equality</p>
+<code>===</code>
+<i>will not perform type conversion</i>
+<code>1 === '1'</code>
+<i>false statement</i><br>
+
+<h2 id="Find_Data_Type">Find Data Type</h2>
+<code>typeof 3</code>
+<i>returns number</i>
+<code>typeof '3'</code>
+<i>returns string</i>
+  
+<h2 id="Boolean_Values">Boolean Values</h2>
+<p>Boolean values are true or false</p>
+  <p>Returning Boolean from Function</p>
+  <pre><code>function isEqual(a,b) {
+  return a === b;
+}
+</pre></code>
+  
+<h2 id="If_Statements">If Statements</h2>
+  <p>If statement structure</p>
+  <code><pre>if (condition is true) {
+  statement is executed
+}
+  </pre></code>
+  <p>Else Statements</p>
+  <code><pre>
+if (num > 10) {
+  return "Bigger than 10";
+} 
+
+else {
+  return "10 or Less";
+}
+  </pre></code>
+  <p>Else If Statements</p>
+  <pre><code>
+if (num > 15) {
+  return "Bigger than 15";
+} 
+
+else if (num < 5) {
+  return "Smaller than 5";
+} 
+
+else {
+  return "Between 5 and 15";
+}
+</pre></code>
+
+<h2 id="Switch_Statements">Switch Statements</h2>
+<p>Switch Statement Structure</p>
+<pre><code>
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}</pre></code>
+
+<h2 id="Objects">Objects</h2>
+<p>Object Structure</p>
+<code><pre>
+var objectName = {
+  "property1": "Whiskers",
+  "property2": 4,
+  "property3": 1,
+  "property4": ["Water", "Dogs"]
+};</pre></code>
+<p>Objects use:</p>
+<code>strings, numbers, booleans, arrays, functions, and objects</code>
+<p>Access Object Dot Notation</p>
+<code><pre>
+var myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+var prop1val = myObj.prop1;
+var prop2val = myObj.prop2;
+</pre></code>
+<p>Access Object Bracket Notation</p>
+<code><pre>
+var myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+myObj["Space Name"];
+myObj['More Space'];
+myObj["NoSpace"];
+</pre></code>
+<p>Access Object using Variables</p>
+<code><pre>
+var dogs = {
+  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+};
+var myDog = "Hunter";
+var myBreed = dogs[myDog];
+console.log(myBreed);
+</pre></code>
+<p>Update Object</p>
+<code><pre>
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+ourDog.name = "Happy Camper";
+</pre></code>
+<p>Add New Properties</p>
+<code><pre>
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.bark = "bow-wow";
+</pre></code>
+<p>Delete Property</p>
+<code><pre>
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+</pre></code>
+<p>Oject for Lookup</p>
+<code><pre>
+var alpha = {
+  1:"Z",
+  2:"Y",
+  3:"X",
+  4:"W",
+  ...
+  24:"C",
+  25:"B",
+  26:"A"
+};
+alpha[2];
+alpha[24];
+
+var value = 2;
+alpha[value];
+</pre></code>
+<p>Check for Property</p>
+<code><pre>
+.hasOwnProperty() 
+</pre></code>
+<i>returns true or false</i>
+<p>Data Structure Array Objects</p>
+<code><pre>
+var myMusic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    formats: ["CD", "8T", "LP"],
+    gold: true
+  }, //comma to seperate objects in array
+
+  {
+    artist: "Deep Purple",
+    title: "Smoke on the water",
+    release_year: 1976,
+    formats: ["CD", "8T", "LP"]
+  }
+];
+</pre></code>
+<p>Accessing Nested Objects</p>
+<code><pre>
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    
+    "bottom drawer": "soda"
+  }
+};
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;</pre></code>
+<i>ourStorage.cabinet["top drawer"].folder2 is equal to "secrets"</i>
+<i>ourStorage.desk.drawer; is equal to "stapler"</i>
+<p>Accessing Nested Arrays</p>
+<code><pre>
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+
+ourPets[0].names[1];
+ourPets[1].names[0];
+</pre></code>
+
+<i>ourPets[0].names[1] would be the string Fluffy, and ourPets[1].names[0] would be the string Spot.</i>
+<code><pre>
+var myPlants = [
+  {
+    type: "flowers",
+    list: ["rose", "tulip", "dandelion"]
+  },
+  {
+    type: "trees",
+    list: ["fir", "pine", "birch"]
+  }
+];
+
+var secondTree = myPlants[1].list[1];
+</pre></code>
+<i>var secondTree = myPlants[1].list[1]; is equal to "pine"</i>
+
+<h2 id = "While_Statements">While Statements</h2>
+<p>Basic While Statement</p>
+<code><pre>
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);
+  i++;
+}
+</pre></code>
+<i>ourArray is equal to [0,1,2,3,4]</i>
+
+<h2 id = "For_Statements">For Statements</h2>
+<p>For Statement Structure</p>
+<code><pre>for (a; b; c)</pre></code>
+<i>a is the intialization statement, b is the condition statement, and c is the final expression</i>
+<p>Initalization Statement</p>
+<i>The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.</i>
+<p>Condition Statement</p>
+<i>The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When the condition is false at the start of the iteration, the loop will stop executing. This means if the condition starts as false, your loop will never execute.</i>
+<p>Final Expression</p>
+<i>The final expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.</i>
+<code><pre>
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+</pre></code>
+<i>ourArray is equal to [0,1,2,3,4]</i>
+
+<h2 id = "Do_While_Statements">Do...While Statements</h2>
+<p>Do...While Statement Structure</p>
+<code><pre>
+var ourArray = [];
+var i = 0;
+do {
+  ourArray.push(i);
+  i++;
+} while (i %lt 5);
+</pre></code>
+<i> do: one pass of the code inside the loop no matter what, and then continue to run the loop while: the specified condition evaluates to true</i>
+
+<h2 id = "Recursion">Recursion</h2>
+<p>Recursion is when a function calls itself until someone stops it. If no one stops it then it'll recurse (call itself) forever. The base case tells the recursive function when it no longer needs to call itself. </p>
+<code><pre>
+function countDownFrom(number) {
+	if (number === 0) {
+		return;
+	}
+
+    console.log(number);    
+    countDownFrom(number - 1);
+}
+
+countDownFrom(5);</pre></code>
+<i>prints out:</i>
+<code><pre>
+5
+4
+3
+2
+1
+</pre></code>
+<p>Create a Count Array</p>
+<code><pre>
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5));
+</pre></code>
+<i>prints out:</i>
+<code>[1, 2, 3, 4, 5]</code>
+
+<h2 id = "Math_Random">Math Functions</h2>
+<p>Math Random</p>
+<code>Math.random()</code>
+<i>Generates a random decimal number between 0 (inclusive) and not quite up to 1 (exclusive). Thus Math.random() can return a 0 but never quite return a 1</i>
+<p>Math Floor</p>
+<code>Math.floor()</code> 
+<i>Round the number down to its nearest whole number.</i>
+<p>Generate Random Whole Numbers</p>
+<code>Math.floor(Math.random() * (max - min + 1)) + min</code>
+
+<h2 id = "parseInt">String to Number Function</h2>
+<p>Parse</p>
+<code>parseInt()</code>
+<i>Parses a string and returns an integer</i>
+<p>Function with Radix</p>
+<code>parseInt(string, radix);</code>
+<i>Radix specifies the base of the number in the string. The radix can be an integer between 2 and 36.</i>
+
+<h2 id = "Conditional_Operator">Conditional Operator</h2>
+<code>a ? b : c</code>
+<i>a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.</i>
+<code><pre>
+function findGreater(a, b) {
+  return a &gt b ? "a is greater" : "b is greater";
+}
+</pre></code>
+<p>Multiple Conditional Operators</p>
+
+<code>
+function findGreaterOrEqual(a, b) {<br>
+return (a === b) ? "a and b are equal" : (a &gt b) ? "a is greater" : "b is greater";<br>
+}
+</code> 
+
+
+
+
+
+
+</body>
